@@ -1,210 +1,189 @@
 \documentclass[12pt, a4paper]{extarticle}
-\usepackage[top=1cm,left=1.5cm,right=1.5cm,bottom=1cm]{geometry} % Modify margins
 
-
-\usepackage{polyglossia}
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{url} % поддержка url-ссылок
-\usepackage{hyperref} % пакет для интеграции гиперссылок
-\usepackage{multirow}
-% \usepackage{arrow}
-\usepackage{setspace}
-\usepackage{titlesec}
-
-% \usepackage[none]{hyphenat}
-\tolerance=1
-\emergencystretch=\maxdimen
-\hyphenpenalty=10000
-\hbadness=10000
-
-
-\usepackage{enumitem}
-\setlist{align=right,topsep=0pt,nolistsep}
-% \renewcommand{\labelitemi}{-}
-
-
-\usepackage{multicol}
-
-\setdefaultlanguage[spelling=modern]{russian}
-\setotherlanguage{english}
-
-\usepackage{fontspec}
-
-\newfontfamily{\cyrillicfont}{CMU Serif}[Script=Cyrillic]
-\newfontfamily{\cyrillicfontrm}{CMU Serif}[Script=Cyrillic]
-\newfontfamily{\cyrillicfontsf}{CMU Serif}[Script=Cyrillic]
-\newfontfamily{\cyrillicfonttt}{Courier New}
-\defaultfontfeatures{Ligatures=TeX}
-\urlstyle{same} % шрифт для URL-ссылок
-\linespread{1.5} % междустрочный интервал
-\setlength{\parindent}{1.25cm} % отступ для абзаца
-% \graphicspath{ {Images} } % Путь до папки с изображениями
-
-% Цвет гиперссылок и цитирования
+\usepackage{url}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=black, filecolor=blue, citecolor=black, urlcolor=blue}
-
-\usepackage[section]{placeins}
-% \captionsetup[figure]{labelformat=simple, labelsep=endash}
-% \captionsetup[table]{labelsep=endash, justification=raggedright, singlelinecheck=off}
-% \captionsetup[lstlisting]{labelformat=simple, labelsep=endash, font=sf}
-
-% basic font size for headings 
-
-
-% indentation for items
-
-
-\pagestyle{empty} % Disable all page numbering
-\setlength{\parindent}{0pt} % Stop paragraph indentation
 \usepackage[export]{adjustbox}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\setlist{align=right,topsep=0pt,nolistsep}
+
+\urlstyle{same}
+\linespread{1.5}
+\setlength{\parindent}{0cm}
+
+
 \begin{document}
-
-
-% \titleformat{\section}{\bfseries}{\thesection}{1em}{}
-% \titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{}
-% \titleformat{\subsubsection}{\bfseries}{\thesubsubsection}{1em}{}
-
-% spacing before and after paragraphs 
-\titlespacing\section{0pt}{0pt plus 0pt minus 0pt}{0pt plus 0pt minus 0pt}
+\titlespacing\section{0pt}{10pt plus 0pt minus 0pt}{0pt plus 0pt minus 0pt}
 \titlespacing\subsection{0pt}{0pt plus 0pt minus 0pt}{0pt plus 0pt minus 0pt}
 \titlespacing\subsubsection{0pt}{0pt plus 0pt minus 0pt}{0pt plus 0pt minus 0pt}
 
-
-
-\setlength{\tabcolsep}{0pt}
-
-\raggedright
-
-% \setlength{\arraystretch}{1pt}
-
-\begin{tabular}{ p{0.7\textwidth} @{\hskip 0.05\textwidth} p{0.25\textwidth} }
-    \section*{Алексей Шадрунов}
-    \subsection*{DevOps-инженер}
-
-    \setlength{\parindent}{1cm} Студент четвёртого курса НИУ ВШЭ (ИБ). Увлекаюсь DevOps, системным администрированием, виртуализацией, поддержкой инфраструктуры и приложений. 
-    
-    \setlength{\parindent}{1cm} Предпочитаю работать методично и следовать лучшим практикам. В свободное время пользуюсь Linux, разрабатываю проекты на Python, изучаю языки и помогаю проводить Московский полумарафон. 
+\begin{tabular}{ p{0.2\textwidth} @{\hskip 0.05\textwidth} p{0.75\textwidth} }
+    % \hline
+    \raisebox{-0.7\totalheight}{\includegraphics[width=0.15\columnwidth,height=0.15\columnwidth,center,clip=true]{../common/me.png}}  
     &
-    
-    \raisebox{-\totalheight}{\includegraphics[width=0.2\columnwidth,center]{../common/me.png}}  
-    \linebreak 
-    \linebreak 
+    {\huge \bf \raggedleft Aleksei Shadrunov}  \newline
     \small
-    \href{mailto:asshadrunov@gmail.com}{asshadrunov@gmail.com} 
-    
-    \href{https://t.me/asshadrunov}{t.me/asshadrunov} 
-    
-    \href{https://github.com/shadrunov}{github.com/shadrunov} 
-    
-    +7 (999) 543-70-29
+    {Bachelor in Information Security, HSE University} \newline
+    \href{mailto:asshadrunov@gmail.com}{asshadrunov@gmail.com} \\
     % \hline
 \end{tabular}
 
-\subsection*{Навыки}
-\begin{multicols}{2}
-    \begin{itemize}
-        \item Ansible, Terraform
-        \item CI/CD (GitLab, TeamCity)
-        \item Docker, виртуализация (libvirt)
-        \item Kubernetes (Rancher, Kubeadm)
-        \item Linux, Windows AD, IPMI
-        \item Apache Kafka, Mesos, Hadoop
-        \item Monitoring (Elastic, Grafana)
-        \item Python (Django, SQL, Kafka)
-        \item C/C++, PHP, Bash, SQL
-        \item Информационная безопасность
-    \end{itemize}
-    \end{multicols}
+\section*{Education}
 
-\subsection*{Опыт работы}
+\begin{tabular}{ @{\hskip 0pt} p{0.23\textwidth} | p{0.75\textwidth} }
+    2020 — 2024
+    & 
+    \begin{minipage}[t]{\linewidth}
+        {\bf B. Sc. Information Security} at HSE University, Moscow, Russia 
+        \begin{itemize}[nosep,after=\strut]
+            \item Current GPA 9.19 out of 10
+            \item Focus on Information Security and Computer Science
+            \item Thesis: "Security Hardening of Containerized Applications"
+        \end{itemize}
+    \end{minipage} \\
+    2009 — 2020 
+    & 
+    \begin{minipage}[t]{\linewidth}
+        {\bf School №1547}, Moscow, Russia 
+        \begin{itemize}[nosep,after=\strut]
+            \item Graduated with honours (GPA 5.0 out of 5)
+        \end{itemize}
+    \end{minipage} \\
+\end{tabular}
 
-\begin{tabular}{ p{0.1\textwidth} @{\hskip 10pt} p{0.85\textwidth} }
-    \raisebox{-\totalheight}{\includegraphics[width=0.1\columnwidth,right]{../common/kaspersky.png}} 
+\section*{Working Experiences}
+
+\begin{flushleft}
+\begin{tabular}{ @{\hskip 0pt} p{0.23\textwidth} | p{0.75\textwidth} }
+    Sep 2023 — present
+    & 
+    \begin{minipage}[t]{\linewidth}
+    {\bf Research Internship} at Laboratory of Internet of Things and \newline
+    Cyber Physical Systems, HSE University, with Pr. E. Krouk
+        \begin{itemize}[nosep,after=\strut]
+            \item Research on containerized applications hardening
+            \item Backend development in a security ed-tech project
+        \end{itemize}
+    \end{minipage} \\
+    July 2022 — present
+    & 
+    \begin{minipage}[t]{\linewidth}
+    {\bf Internship} at Kaspersky Lab
+        \begin{itemize}[nosep,after=\strut]
+            \item DevOps in Infrastructure development department
+            \item Ensured the security of application deployment and maintained company's cloud infrastructure in Docker and Kubernetes
+        \end{itemize}
+    \end{minipage} \\
+    Feb — June 2022
+    & 
+    \begin{minipage}[t]{\linewidth}
+    {\bf Internship} at Positive Technologies
+        \begin{itemize}[nosep,after=\strut]
+            \item Security Operational Centre specialist
+            \item Involved in incidents investigation and security monitoring
+        \end{itemize}
+    \end{minipage} \\
+\end{tabular}
+\end{flushleft}
+
+\section*{Conferences}
+
+\begin{tabular}{ @{\hskip 0pt} p{0.23\textwidth} | p{0.75\textwidth} }
+    2022 & 60th International Scientific Student Conference, Novosibirsk \newline 
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut]
+            \item On the development of the chat-bot system to use in the educational process at MIEM, HSE University
+        \end{itemize}
+    \end{minipage} \\
+    2017 & Final Conference of "The School of Real Affairs" projects  \\
+\end{tabular}
+
+\section*{Extracurricular Activities}
+
+\begin{tabular}{ @{\hskip 0pt} p{0.20\textwidth} | p{0.75\textwidth} }
+    2022 — present 
     &
-    {\bf с июля 2022, Лаборатория Касперского}
-    
-    Стажёр DevOps, команда разработки инфраструктуры
-
-    \begin{itemize}
-        \item Настраивал инфраструктуру для CI/CD (TeamCity и build-агенты, сборка образов, интеграционное тестирование, деплой);
-        \item Управлял серверами и ВМ с помощью Ansible и RHEL Kickstart;
-        \item Разворачивал приложения в Kubernetes, логировал события из Rancher;
-        \item Настраивал мониторинг инфраструктуры, аггрегацию метрик;
-        \item Восстанавливал работу внутренних сервисов после инцидентов.
-    \end{itemize}
-    \\
-    \raisebox{-\totalheight}{\includegraphics[width=0.1\columnwidth,right]{../common/pt.png}} 
+    \begin{minipage}[t]{\linewidth}
+        \textbf{Volunteer} at Russian running community
+        \begin{itemize}[nosep,after=\strut]
+            \item Organised two Moscow Half-marathons and Moscow Marathon
+            \item Helped hundreds of participants to pass the registration procedure and stay hydrated during the event
+        \end{itemize}
+    \end{minipage} \\
+    2021 
     &
-    {\bf февраль — июнь 2022, Positive Technologies}
-    
-    Младший специалист, отдел SOC
-    
-    \begin{itemize}
-        \item занимался мониторингом и расследованием инцидентов
-    \end{itemize}
+    \begin{minipage}[t]{\linewidth}
+        \textbf{Buddy} for an exchange student from Finland
+        \begin{itemize}[nosep,after=\strut]
+            \item Helped to have a smooth semester by communicating with dormitory personnel, advising on paperwork and local activities
+        \end{itemize}
+    \end{minipage} \\
+    2020 — 2021 
+    &
+    \begin{minipage}[t]{\linewidth}
+        \textbf{Member} of Ecological student organisation "Green HSE"
+        \begin{itemize}[nosep,after=\strut]
+            \item With initiative students introduced waste recycling on campus 
+            \item Maintained cleanliness and order at the organisation's warehouse
+            \item Communicated with a plastic recycling factory in Tver region
+        \end{itemize}
+    \end{minipage} \\
+\end{tabular}
 
-    % \hline
+\section*{Additional Education}
+
+\begin{tabular}{ @{\hskip 0pt} p{0.20\textwidth} | p{0.8\textwidth} }
+    2022
+    & 
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut]
+            \item \textbf{Training program} "DevSecOps and Containerization technologies"
+            \item \textbf{Course} "Cloud Technologies", HSE University
+        \end{itemize}
+    \end{minipage} \\
+    2021
+    & 
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut]
+            \item \textbf{Summer school} "DevOps and CI/CD", HSE University
+            \item \textbf{Course} "Databases and SQL for Data Science with Python", \newline IBM via Coursera, with Honours
+            \item \textbf{Course} "CCNA Routing and Switching", Cisco Academy
+            \item \textbf{Certificates of competence} from security solution vendors \newline (InfoWatch, Infotecs)
+        \end{itemize}
+    \end{minipage} \\
+    2020
+    & 
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut]
+            \item \textbf{Course} "Python: foundations and application", ITMO University
+        \end{itemize}
+    \end{minipage} \\
 \end{tabular}
 
 
-\subsection*{Образование}
+\section*{Awards}
 
-\begin{tabular}{ p{0.1\textwidth} @{\hskip 10pt} p{0.85\textwidth} }
-    \raisebox{-\totalheight}{\includegraphics[width=0.1\columnwidth,right]{../common/hse.png}} 
-    &
-    {\bf 2020 — 2024}
-
-    {\bf НИУ ВШЭ}, Московский институт электроники и математики им. Тихонова
-
-    {\it Информационная безопасность (бакалавриат)}
-    \\
-    % \hline
+\begin{tabular}{ @{\hskip 0pt} p{0.20\textwidth} | p{0.75\textwidth} }
+    2022 & \textbf{Medalist} of All-Russian Student Olympiad "I am a professional" \\
+    2021 & \textbf{Winner} of the III Industrial Championship "Digitalskills" \newline
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut]
+            \item Field: Corporate defence from internal threats
+        \end{itemize}
+    \end{minipage} \\
 \end{tabular}
 
 
+\section*{Languages}
 
-\subsection*{Дополнительное образование}
-\small
-\begin{itemize}
-    \item {\bf \href{https://docs.google.com/document/d/1TC7nxMp90rXYOoCR8xFcSec68fIHsvFjR1trdSvrNIM/edit?usp=sharing}{Программа повышения квалификации "DevSecOps и технологии контейнеризации"}} \\
-    МИЭМ НИУ ВШЭ \\
-    (2022)
-    \item {\bf Курс «Облачные вычисления» (Yandex Cloud)} \\
-    НИУ ВШЭ, Факультет компьютерных наук \\
-    (2022)
-    \item {\bf Летняя школа МИЭМ НИУ ВШЭ «DevOps и CI/CD»} (\href{https://drive.google.com/file/d/1mH_22bA2mgqw43ehw-CvZM6c7_8BLLYm/view?usp=sharing}{drive}) \\
-    (2021)
-    \item {\bf \href{https://drive.google.com/file/d/1RVzl6slqWSsdnuELYxT9DYE8HfRkd_6O/view?usp=sharing}{Сертификат} специалиста по технологии ViPNet} \\
-    Учебный центр ИнфоТеКС \\
-    (2021)
-    \item {\bf \href{https://drive.google.com/file/d/1F6PAzi25VpJ1SL9G5TVafDHkP2hBAEeB/view}{Сертификат} специалиста по администрированию InfoWatch Traffic Monitor 7} \\
-    Infowatch \\
-    (2021)
-    \item {\bf Курс по СУБД и SQL} \\
-    Databases and SQL for Data Science with Python (\href{https://drive.google.com/file/d/1lifQoGFJDSxcjNfwNnR1FiF0MavP9uJL/view?usp=sharing}{drive}) \\
-    (2021)
-    \item {\bf Курс по сетевому администрированию} \\
-    Cisco CCNA: R\&S (\href{https://drive.google.com/file/d/1fBK2Zp-YPH3ahQ8KUEko2ggwCXJ_MYSj/view}{drive}) \\
-    (2021)
-    \item {\bf Курс по Python} \\
-    Python: основы и применение (\href{https://drive.google.com/file/d/1opeiH4ZQKNo-1PUl4RhARUt85vdAHb3L/view?usp=sharing}{drive}) \\
-    (2020)
-\end{itemize}
-
-
-\subsection*{Достижения}
-\small
-\begin{itemize}
-    \item {\bf Всероссийская олимпиада студентов «Я — профессионал»} \\
-    \href{https://drive.google.com/file/d/1m03jSHaAR2LvP1NXdzZBnVJ_jEoJGz5P/view?usp=sharing}{призёр} в направлении «Безопасность информационных систем и технологий критически важных объектов» \\
-    (2022)
-    \item {\bf III отраслевой чемпионат Digitalskills 2021} \\
-    \href{https://drive.google.com/file/d/1ghvxSiuflWyP6pI33bKbf_N1M8ZIhiTY/view?usp=sharing}{диплом 1 степени} в компетенции «Корпоративная защита от внутренних угроз ИБ» \\
-    (2021)
-    \item Второе место в рейтинге стажёров года в Касперском (2022)
-\end{itemize}
-
-
+\begin{tabular}{ @{\hskip 0pt} p{0.20\textwidth} | p{0.75\textwidth} }
+    Proficient & English (IELTS 8.0) \\
+    Beginner & German, Spanish \\
+\end{tabular}
 
 \end{document}
